@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Chackor Organisation, Achakourou Café Touba, Issa KAMARA">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/logo.jpg" type="image/x-icon">
+</head>
+<body>
+
+<header>
+    <h1>Bienvenue sur Mon Portfolio</h1>
+    <nav>
+        <ul>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#products">Produits & Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#cv">CV</a></li>
+            <li><a href="#gallery">Galerie</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="about">
+    <div class="content">
+        <h2>À propos de moi</h2>
+        <p>Bienvenue sur ma page personnelle ! Je suis passionné par le café et j'ai lancé ma propre production de café appelée "Achakourou Café Touba". En plus de ma passion pour le café, j'aime partager mes projets et réalisations personnels. Explorez cette page pour en savoir plus sur moi, mes produits et services, mon parcours, et mon CV.</p>
+    </div>
+    <img src="img/logo.jpg" width="410px" height="280px" alt=""><br>
+    <strong><i>Issa KAMARA</i><br>Entrepreneur Indépendant et Développeur Web</strong>
+</section>
+
+<section id="products">
+    <div class="content products">
+        <h2>Achakourou Café Touba</h2>
+        <p>Découvrez notre gamme de produits "Achakourou Café Touba". Nous proposons un café de qualité supérieure, torréfié avec soin pour offrir une expérience unique.</p>
+        <img src="img/125g.jpg" alt="Café Touba">
+    </div>
+</section>
+
+<section id="portfolio">
+    <div class="content portfolio">
+        <h2>Mes Projets et Réalisations</h2>
+        <p>Voici quelques-uns de mes projets et réalisations personnels. J'aime créer et développer de nouvelles idées.</p>
+        <!-- Ajoutez ici des descriptions et des images de vos projets -->
+        <h3>Mes Projets d'études</h3>
+        <p>
+            <img src="img/github.png" alt="github">
+            <p>Veuillez acceder à mon compte github à travers ce lien <a href="https://github.com/IssaKamara958">https://github.com/IssaKamara958</a></p>
+        </p>
+    </div>
+</section>
+
+<section id="cv">
+    <div class="content cv">
+        <h2>Mon CV</h2>
+        <p>Téléchargez mon CV pour en savoir plus sur mon parcours professionnel et académique.</p>
+        <a href="monCv/mon-CV/issaKamaraCv.docx" download>Télécharger mon CV</a>
+    </div>
+</section>
+
+<section id="gallery">
+    <div class="content gallery">
+        <h2>Galerie d'Images</h2>
+        <p>Quelques images de mes produits, projets, et moments marquants.</p>
+        <div class="carousel">
+            <img class="carousel-img" src="img/pack.jpg" alt="Image 1">
+            <img class="carousel-img hidden" src="img/cafe-torrefies.jpg" alt="Image 2">
+            <img class="carousel-img hidden" src="img/goblet.jpg" alt="Image 3">
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+        <div class="carousel-indicators">
+            <span class="active" onclick="showSlide(0)"></span>
+            <span onclick="showSlide(1)"></span>
+            <span onclick="showSlide(2)"></span>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="content">
+        <h2>Contact</h2>
+        <p>Vous avez des questions ou souhaitez en savoir plus ? Contactez-moi via le formulaire ci-dessous :</p>
+        <form action="mailto:issakamara958@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+            <div class="error" id="nameError"></div>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+            <div class="error" id="emailError"></div>
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <div class="error" id="messageError"></div>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Mon Portfolio. Tous droits réservés.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
