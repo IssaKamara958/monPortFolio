@@ -2,7 +2,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #070707;
+            background-color: #dfdbdb;
         }
         header {
             background-color: #fd6500;
@@ -46,7 +46,7 @@
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #333;
+            background-color: #fd6500;
             color: #fff;
         }
         form {
@@ -64,14 +64,14 @@
         }
         form button {
             padding: 10px;
-            background-color: #333;
+            background-color: #fd6500 ;
             color: #fff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
         form button:hover {
-            background-color: #555;
+            background-color: #430ec0;
         }
         .error {
             color: red;
@@ -128,3 +128,48 @@
         .active, .carousel-indicators span:hover {
             background-color: #717171;
         }
+
+
+
+    /* Les Medi@ Queries */
+
+
+/* Styles pour les petits écrans */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+    .carousel img {
+        max-width: 100%;
+    }
+    .content {
+        padding: 10px;
+    }
+    form label, form input, form textarea, form button {
+        width: 100%;
+    }
+}
+
+/* Styles pour les très petits écrans */
+@media (max-width: 480px) {
+    header {
+        padding: 5px 0;
+    }
+    section {
+        padding: 10px;
+        margin: 5px;
+    }
+    .content {
+        box-shadow: none;
+        padding: 10px;
+    }
+    .carousel-indicators {
+        padding: 5px;
+    }
+    .prev, .next {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
