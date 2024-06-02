@@ -125,6 +125,74 @@
             display: inline-block;
             transition: background-color 0.6s ease;
         }
+
         .active, .carousel-indicators span:hover {
             background-color: #717171;
         }
+
+/* Media Queries */
+
+/* Tablets */
+@media (min-width: 600px) {
+    nav ul {
+        text-align: left;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin: 0 15px;
+    }
+
+    section {
+        margin: 20px 10px;
+    }
+
+    .content {
+        padding: 30px;
+    }
+
+    footer {
+        padding: 30px;
+    }
+}
+
+/* Desktops */
+@media (min-width: 1024px) {
+    nav ul {
+        text-align: right;
+    }
+
+    nav ul li {
+        margin: 0 20px;
+    }
+
+    .content {
+        max-width: 1200px;
+    }
+
+    section {
+        margin: 20px auto;
+        padding: 40px;
+    }
+
+    .carousel img {
+        height: auto;
+    }
+
+    form {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    form label, form input, form textarea, form button {
+        flex: 1 1 48%;
+        margin: 10px;
+    }
+
+    form button {
+        width: auto;
+        margin-top: 20px;
+    }
+}
+
