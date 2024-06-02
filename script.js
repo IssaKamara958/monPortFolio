@@ -73,3 +73,83 @@
 
     showSlide(currentSlide);
 
+
+// script.js
+
+// Carousel functionality
+let currentSlide = 0;
+const slides = document.querySelectorAll('.carousel-img');
+const indicators = document.querySelectorAll('.carousel-indicators span');
+
+function showSlide(index) {
+    slides[currentSlide].classList.add('hidden');
+    indicators[currentSlide].classList.remove('active');
+    currentSlide = (index + slides.length) % slides.length;
+    slides[currentSlide].classList.remove('hidden');
+    indicators[currentSlide].classList.add('active');
+}
+
+function changeSlide(direction) {
+    showSlide(currentSlide + direction);
+}
+
+document.querySelector('.prev').addEventListener('click', () => changeSlide(-1));
+document.querySelector('.next').addEventListener('click', () => changeSlide(1));
+indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => showSlide(index));
+});
+
+// Form validation
+const form = document.querySelector('form');
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const messageInput = document.getElementById('message');
+const nameError = document.getElementById('nameError');
+const emailError = document.getElementById('emailError');
+const messageError = document.getElementById('messageError');
+
+form.addEventListener('submit', (event) => {
+    let valid = true;
+    nameError.textContent = '';
+    emailError.textContent = '';
+    messageError.textContent = '';
+
+    if (!nameInput.value) {
+        nameError.textContent = 'Veuillez entrer votre nom.';
+        valid = false;
+    }
+    if (!emailInput.value || !emailInput.value.includes('@')) {
+        emailError.textContent = 'Veuillez entrer une adresse email valide.';
+        valid = false;
+    }
+    if (!messageInput.value) {
+        messageError.textContent = 'Veuillez entrer votre message.';
+        valid = false;
+    }
+
+    if (!valid) {
+        event.preventDefault();
+    }
+});
+
+// Smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Responsive menu (optional)
+const menuToggle = document.createElement('button');
+menuToggle.innerHTML = '☰';
+menuToggle.classList.add('menu-toggle');
+document.querySelector('header').appendChild(menuToggle);
+
+menuToggle.addEventListener('click', () => {
+    const nav = document.querySelector('nav ul');
+    nav.classList.toggle('open');
+});
+
