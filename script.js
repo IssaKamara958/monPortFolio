@@ -153,3 +153,20 @@ menuToggle.addEventListener('click', () => {
     nav.classList.toggle('open');
 });
 
+window.addEventListener('scroll', () => {
+    const backToTopButton = document.getElementById('back-to-top');
+    if (window.scrollY > 300) {
+        backToTopButton.style.display = 'block';
+    } else {
+        backToTopButton.style.display = 'none';
+    }
+});
+
+document.getElementById('back-to-top').addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+
