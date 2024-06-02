@@ -130,6 +130,47 @@
             background-color: #717171;
         }
 
+/*          Responsive menu */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            cursor: pointer;
+        }
+
+@media (max-width: 600px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #fd6500;
+        position: absolute;
+        right: 0;
+        top: 60px;
+        width: 200px;
+    }
+    nav ul.open {
+        display: flex;
+    }
+    nav ul li {
+        display: block;
+        text-align: right;
+        margin: 0;
+        padding: 10px 20px;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}
+
+
+
+
+
 /* Media Queries */
 
 /* Tablets */
