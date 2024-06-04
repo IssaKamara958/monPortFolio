@@ -177,6 +177,10 @@
     .menu-toggle {
         display: block;
     }
+    img{
+width:210px;
+align-items:center;
+    } 
 }
 
 
