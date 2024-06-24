@@ -169,4 +169,29 @@ document.getElementById('back-to-top').addEventListener('click', () => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    let carousels = document.querySelectorAll('.carousel');
+    carousels.forEach(carousel => {
+        let scrollNext = document.createElement('button');
+        scrollNext.innerText = 'Next';
+        scrollNext.addEventListener('click', function() {
+            carousel.scrollBy({
+                left: 400,
+                behavior: 'smooth'
+            });
+        });
+        let scrollPrev = document.createElement('button');
+        scrollPrev.innerText = 'Previous';
+        scrollPrev.addEventListener('click', function() {
+            carousel.scrollBy({
+                left: -400,
+                behavior: 'smooth'
+            });
+        });
+        carousel.parentElement.appendChild(scrollNext);
+        carousel.parentElement.appendChild(scrollPrev);
+    });
+});
+
+
 
