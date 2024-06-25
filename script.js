@@ -74,7 +74,16 @@
     showSlide(currentSlide);
 
 
-// script.js
+function handleFormSubmit(event) {
+    event.preventDefault(); // Empêche la soumission du formulaire
+    
+    const name = document.getElementById('name').value;
+    alert(`Bonne réception, ${name} !`); // Affiche une alerte de bonne réception avec le nom saisi
+    
+    document.getElementById('myForm').reset(); // Réinitialise le formulaire
+}
+
+document.getElementById('myForm').addEventListener('submit', handleFormSubmit);
 
 // Carousel functionality
 let currentSlide = 0;
