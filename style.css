@@ -10,7 +10,7 @@ background-color: var(--primary-color);
     color: var(--text-color);
     text-align: center;
     padding: 20px 0;
-    background-image: url('imgs/myo-baner.jpg'); /* Remplacez par le chemin de votre image */
+    background-image: url('imgs/myo-baner1.jpg'); /* Remplacez par le chemin de votre image */
     background-size: cover; /* Assure que l'image couvre toute la page */
     background-position: center; /* Centre l'image de fond */
     background-attachment: fixed; /* Fixe l'image de fond pour qu'elle ne défile pas */
