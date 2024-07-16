@@ -18,6 +18,9 @@ background-color: var(--primary-color);
             padding: 10px 0;
             text-align: center;
         }
+header h1{
+color: orangered;
+}
         nav ul {
             list-style: none;
             padding: 0;
