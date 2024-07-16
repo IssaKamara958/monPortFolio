@@ -17,6 +17,7 @@ background-color: var(--primary-color);
             color: #fff;
             padding: 10px 0;
             text-align: center;
+min-height: 70vh;
         }
 header h1{
 color: orangered;
