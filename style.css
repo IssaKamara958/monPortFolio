@@ -328,7 +328,7 @@ footer{
     color: yellow;
     text-align: center;
     padding: 20px 0;
-    background-image: url('imgs/myopie-baner.jpg'); /* Remplacez par le chemin de votre image */
+    background-image: url('carte-visite.jpg'); /* Remplacez par le chemin de votre image */
     background-size: cover; /* Assure que l'image couvre toute la page */
     background-position: center; /* Centre l'image de fond */
     background-attachment: fixed;
