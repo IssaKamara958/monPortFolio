@@ -203,4 +203,85 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Apparition animée des éléments lors du chargement de la page
+    const elements = document.querySelectorAll('.animate-on-load');
+    elements.forEach(el => {
+        el.classList.add('visible');
+    });
 
+    // Défilement fluide pour les ancres
+    const links = document.querySelectorAll('a[href^="#"]');
+    links.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Effet de survol pour les liens de contact
+    const contactLinks = document.querySelectorAll('.contact-info a');
+    contactLinks.forEach(link => {
+        link.addEventListener('mouseenter', function() {
+            this.classList.add('hover');
+        });
+        link.addEventListener('mouseleave', function() {
+            this.classList.remove('hover');
+        });
+    });
+    
+    // Validation du formulaire et soumission
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Validation des cases à cocher
+        const checkboxes = document.querySelectorAll('input[name="quartier"]');
+        const checkedCheckboxes = Array.from(checkboxes).filter(checkbox => checkbox.checked);
+
+        if (checkedCheckboxes.length !== 1) {
+            alert('Veuillez cocher une seule case correspondant à votre quartier.');
+            return;
+        }
+
+        // Validation du numéro de téléphone
+        const telephone = document.getElementById('telephone').value;
+        const phonePattern = /^\+221\d{9}$/;
+
+        if (!phonePattern.test(telephone)) {
+            alert('Veuillez entrer un numéro de téléphone valide avec l\'indicatif du Sénégal (+221) suivi de neuf chiffres.');
+            return;
+        }
+
+        // Sanitize and validate input
+        const nom = sanitizeInput(document.getElementById('nom').value);
+        const prenom = sanitizeInput(document.getElementById('prenom').value);
+        const vouloir = sanitizeInput(document.getElementById('vouloir').value);
+        const quartier = checkedCheckboxes[0].value;
+
+        if (!nom || !prenom || !vouloir) {
+            alert('Tous les champs doivent être remplis.');
+            return;
+        }
+
+        alert('Bien reçu!');
+
+        const message = `
+            Nom: ${nom}
+            Prénom: ${prenom}
+            Téléphone: ${telephone}
+            Quartier: ${quartier}
+            Demande: ${vouloir}
+        `;
+
+        const whatsappUrl = `https://wa.me/221773465237?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+    });
+
+    function sanitizeInput(input) {
+        const element = document.createElement('div');
+        element.innerText = input;
+        return element.innerHTML.trim();
+    }
+});
