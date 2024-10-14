@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #0056b3;
+    font-size: 2.5em; /* Taille de police pour le nom */
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+.job, .education-item, .result {
+    margin-bottom: 15px;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 25px;
+    overflow: hidden;
+    height: 25px;
+    margin: 10px 0;
+}
+
+.progress {
+    background-color: #4caf50; /* couleur verte */
+    height: 100%;
+    text-align: center;
+    line-height: 25px;
+    color: white;
+    transition: width 0.4s ease;
+    border-radius: 25px;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    body {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 2.2em; /* Réduire la taille du nom */
+    }
+}
+
+@media (max-width: 992px) {
+    h1 {
+        font-size: 2em; /* Ajustement pour tablette */
+    }
+    header, section {
+        padding: 10px; /* Réduire le rembourrage */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Réduire encore le rembourrage */
+    }
+    h1 {
+        font-size: 1.8em; /* Ajustement pour mobile */
+    }
+    .job, .education-item, .result {
+        padding: 8px; /* Ajuster le rembourrage pour les éléments */
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.5em; /* Réduire encore plus pour petits écrans */
+    }
+    footer {
+        font-size: 0.9em; /* Ajuster la taille de police dans le pied de page */
+    }
+}
