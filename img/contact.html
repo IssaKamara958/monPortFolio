@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <title>Formulaire de Contact</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<section class="ftco-section img bg-hero" style="background-image: url(baniere.jpg);">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-5">
+                <h2 class="heading-section">Formulaire de Contact</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-11">
+                <div class="wrapper">
+                    <div class="row no-gutters justify-content-between">
+                        <div class="col-lg-6 d-flex align-items-stretch">
+                            <div class="info-wrap w-100 p-5">
+                                <h3 class="mb-4">Contactez-nous</h3>
+                                <div class="dbox w-100 d-flex align-items-start">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span class="fa fa-map-marker"></span>
+                                    </div>
+                                    <div class="text pl-4">
+                                        <p><span>Adresse:</span> Parcelles Assainies Unité 1, Thiès</p>
+                                    </div>
+                                </div>
+                                <div class="dbox w-100 d-flex align-items-start">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span class="fa fa-phone"></span>
+                                    </div>
+                                    <div class="text pl-4">
+                                        <p><span>Téléphone:</span> <a href="tel://221776828441">+221 776828441</a></p>
+                                    </div>
+                                </div>
+                                <div class="dbox w-100 d-flex align-items-start">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span class="fa fa-paper-plane"></span>
+                                    </div>
+                                    <div class="text pl-4">
+                                        <p><span>Email:</span> <a href="mailto:issakamara958@gmail.com">issakamara958@gmail.com</a></p>
+                                    </div>
+                                </div>
+                                <div class="dbox w-100 d-flex align-items-start">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span class="fa fa-globe"></span>
+                                    </div>
+                                    <div class="text pl-4">
+                                        <p><span>Site Web:</span> <a href="https://issakamara-dev.netlify.app/">https://issakamara-dev.netlify.app/</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="contact-wrap w-100 p-md-5 p-4">
+                                <h3 class="mb-4">Prenez contact</h3>
+                                <div id="form-message-warning" class="mb-4" style="display: none;"></div>
+                                <div id="form-message"></div>
+                                <div id="form-message-success" class="mb-4" style="display: none;">
+                                    Votre requête a été envoyée, merci !
+                                </div>
+                                <form method="POST" action="sendEmail.js" id="contactForm" name="contactForm">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="name" id="name" placeholder="Nom" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Sujet" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <textarea name="message" class="form-control" id="message" cols="30" rows="5" placeholder="Message" required></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="submit" value="Envoyer le Message" class="btn btn-primary">
+                                                <div class="submitting"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div id="form-message" class="mb-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script src="sendEmail.js"></script>
+
+</body>
+</html>
